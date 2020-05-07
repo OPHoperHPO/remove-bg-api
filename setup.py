@@ -8,14 +8,14 @@ with open('README.md') as f:
     readme = f.read()
 
 setup(
-    name='removebg.py',
+    name='remove_bg_api',
     version='0.2.1',
     description='Remove.bg Python API Wrapper',
     license='MIT',
     author='Anodev (OPHoperHPO)',
-    keywords = ['removebg.py', 'removebg', 'api', "wrapper"],
+    keywords = ['remove_bg_api', 'removebg', 'api', "wrapper"],
     author_email='netbook21@mail.ru',
-    url='https://github.com/OPHoperHPO/removebg.py',
+    url='https://github.com/OPHoperHPO/remove_bg_api',
     long_description=readme,
     long_description_content_type='text/markdown',
     packages=find_packages(exclude=('docs', 'examples')),

@@ -1,5 +1,5 @@
 """
-File: removebg.py \n
+File: remove_bg_api.py \n
 Description: Remove.bg Python API Wrapper \n
 Author: Anodev (OPHoperHPO) (https://github.com/OPHoperHPO) \n
 License: MIT \n

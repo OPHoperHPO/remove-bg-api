@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="generator" content="pdoc 0.8.1" />
-<title>removebg API documentation</title>
-<meta name="description" content="File: removebg.py …" />
+<title>remove_bg_api API documentation</title>
+<meta name="description" content="File: remove_bg_api.py …" />
 <link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
 <link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
@@ -17,10 +17,10 @@
 <main>
 <article id="content">
 <header>
-<h1 class="title">Module <code>removebg</code></h1>
+<h1 class="title">Package <code>remove_bg_api</code></h1>
 </header>
 <section id="section-intro">
-<p>File: removebg.py </p>
+<p>File: remove_bg_api.py </p>
 <p>Description: Remove.bg Python API Wrapper </p>
 <p>Author: Anodev (OPHoperHPO) (<a href="https://github.com/OPHoperHPO">https://github.com/OPHoperHPO</a>) </p>
 <p>License: MIT</p>
@@ -29,7 +29,7 @@
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">&#34;&#34;&#34;
-File: removebg.py \n
+File: remove_bg_api.py \n
 Description: Remove.bg Python API Wrapper \n
 Author: Anodev (OPHoperHPO) (https://github.com/OPHoperHPO) \n
 License: MIT \n
@@ -340,7 +340,7 @@ class Errors:
 <section>
 <h2 class="section-title" id="header-classes">Classes</h2>
 <dl>
-<dt id="removebg.Account"><code class="flex name class">
+<dt id="remove_bg_api.Account"><code class="flex name class">
 <span>class <span class="ident">Account</span></span>
 <span>(</span><span>parent)</span>
 </code></dt>
@@ -400,7 +400,7 @@ class Errors:
 </details>
 <h3>Methods</h3>
 <dl>
-<dt id="removebg.Account.balance"><code class="name flex">
+<dt id="remove_bg_api.Account.balance"><code class="name flex">
 <span>def <span class="ident">balance</span></span>(<span>self)</span>
 </code></dt>
 <dd>
@@ -418,7 +418,7 @@ class Errors:
     return self.__local_balance__</code></pre>
 </details>
 </dd>
-<dt id="removebg.Account.free_api_calls"><code class="name flex">
+<dt id="remove_bg_api.Account.free_api_calls"><code class="name flex">
 <span>def <span class="ident">free_api_calls</span></span>(<span>self)</span>
 </code></dt>
 <dd>
@@ -436,7 +436,7 @@ class Errors:
     return self.get_all_info()[&#34;data&#34;][&#34;attributes&#34;][&#34;api&#34;][&#34;free_calls&#34;]</code></pre>
 </details>
 </dd>
-<dt id="removebg.Account.get_all_info"><code class="name flex">
+<dt id="remove_bg_api.Account.get_all_info"><code class="name flex">
 <span>def <span class="ident">get_all_info</span></span>(<span>self)</span>
 </code></dt>
 <dd>
@@ -457,7 +457,7 @@ class Errors:
     return self.__parent__.__process_response__(response, False)</code></pre>
 </details>
 </dd>
-<dt id="removebg.Account.get_balance_dict"><code class="name flex">
+<dt id="remove_bg_api.Account.get_balance_dict"><code class="name flex">
 <span>def <span class="ident">get_balance_dict</span></span>(<span>self)</span>
 </code></dt>
 <dd>
@@ -477,7 +477,7 @@ class Errors:
     return data[&#34;data&#34;][&#34;attributes&#34;][&#34;credits&#34;]</code></pre>
 </details>
 </dd>
-<dt id="removebg.Account.refresh_balance"><code class="name flex">
+<dt id="remove_bg_api.Account.refresh_balance"><code class="name flex">
 <span>def <span class="ident">refresh_balance</span></span>(<span>self)</span>
 </code></dt>
 <dd>
@@ -495,7 +495,7 @@ class Errors:
 </dd>
 </dl>
 </dd>
-<dt id="removebg.Errors"><code class="flex name class">
+<dt id="remove_bg_api.Errors"><code class="flex name class">
 <span>class <span class="ident">Errors</span></span>
 </code></dt>
 <dd>
@@ -564,38 +564,38 @@ class Errors:
 </details>
 <h3>Class variables</h3>
 <dl>
-<dt id="removebg.Errors.ApiErrorCode400"><code class="name">var <span class="ident">ApiErrorCode400</span></code></dt>
+<dt id="remove_bg_api.Errors.ApiErrorCode400"><code class="name">var <span class="ident">ApiErrorCode400</span></code></dt>
 <dd>
 <div class="desc"><p>API Error: Invalid parameters or original_image file unprocessable</p></div>
 </dd>
-<dt id="removebg.Errors.ApiErrorCode402"><code class="name">var <span class="ident">ApiErrorCode402</span></code></dt>
+<dt id="remove_bg_api.Errors.ApiErrorCode402"><code class="name">var <span class="ident">ApiErrorCode402</span></code></dt>
 <dd>
 <div class="desc"><p>API Error: Insufficient credits (no credits charged)</p></div>
 </dd>
-<dt id="removebg.Errors.ApiErrorCode403"><code class="name">var <span class="ident">ApiErrorCode403</span></code></dt>
+<dt id="remove_bg_api.Errors.ApiErrorCode403"><code class="name">var <span class="ident">ApiErrorCode403</span></code></dt>
 <dd>
 <div class="desc"><p>API Error: Authentication failed.</p></div>
 </dd>
-<dt id="removebg.Errors.ApiErrorCode429"><code class="name">var <span class="ident">ApiErrorCode429</span></code></dt>
+<dt id="remove_bg_api.Errors.ApiErrorCode429"><code class="name">var <span class="ident">ApiErrorCode429</span></code></dt>
 <dd>
 <div class="desc"><p>API Error:
 Rate limit exceeded.</p></div>
 </dd>
-<dt id="removebg.Errors.EmptyResponseDataError"><code class="name">var <span class="ident">EmptyResponseDataError</span></code></dt>
+<dt id="remove_bg_api.Errors.EmptyResponseDataError"><code class="name">var <span class="ident">EmptyResponseDataError</span></code></dt>
 <dd>
 <div class="desc"><p>API Wrapper Error: Attempt to send empty data to remove.bg server using POST request.</p></div>
 </dd>
-<dt id="removebg.Errors.UnknownError"><code class="name">var <span class="ident">UnknownError</span></code></dt>
+<dt id="remove_bg_api.Errors.UnknownError"><code class="name">var <span class="ident">UnknownError</span></code></dt>
 <dd>
 <div class="desc"><p>API Error: Unknown Error</p></div>
 </dd>
-<dt id="removebg.Errors.WrongRequestMethodError"><code class="name">var <span class="ident">WrongRequestMethodError</span></code></dt>
+<dt id="remove_bg_api.Errors.WrongRequestMethodError"><code class="name">var <span class="ident">WrongRequestMethodError</span></code></dt>
 <dd>
 <div class="desc"><p>API Wrapper Error: A nonexistent method for sending a request to remove.bg servers is indicated.</p></div>
 </dd>
 </dl>
 </dd>
-<dt id="removebg.RemoveBg"><code class="flex name class">
+<dt id="remove_bg_api.RemoveBg"><code class="flex name class">
 <span>class <span class="ident">RemoveBg</span></span>
 <span>(</span><span>api_key)</span>
 </code></dt>
@@ -790,14 +790,14 @@ Rate limit exceeded.</p></div>
 </details>
 <h3>Instance variables</h3>
 <dl>
-<dt id="removebg.RemoveBg.account"><code class="name">var <span class="ident">account</span></code></dt>
+<dt id="remove_bg_api.RemoveBg.account"><code class="name">var <span class="ident">account</span></code></dt>
 <dd>
 <div class="desc"><p>Alias to Account object. USE ONLY THIS!</p></div>
 </dd>
 </dl>
 <h3>Methods</h3>
 <dl>
-<dt id="removebg.RemoveBg.change_api_key"><code class="name flex">
+<dt id="remove_bg_api.RemoveBg.change_api_key"><code class="name flex">
 <span>def <span class="ident">change_api_key</span></span>(<span>self, token: str)</span>
 </code></dt>
 <dd>
@@ -815,7 +815,7 @@ Rate limit exceeded.</p></div>
     self.__api_key__ = token</code></pre>
 </details>
 </dd>
-<dt id="removebg.RemoveBg.remove_bg_base64"><code class="name flex">
+<dt id="remove_bg_api.RemoveBg.remove_bg_base64"><code class="name flex">
 <span>def <span class="ident">remove_bg_base64</span></span>(<span>self, input_base64, out_path='nbg.png', size='preview', raw=True, data=None)</span>
 </code></dt>
 <dd>
@@ -857,7 +857,7 @@ ignored! </p>
     return self.__process_response__(response, raw, True, out_path)</code></pre>
 </details>
 </dd>
-<dt id="removebg.RemoveBg.remove_bg_bytes"><code class="name flex">
+<dt id="remove_bg_api.RemoveBg.remove_bg_bytes"><code class="name flex">
 <span>def <span class="ident">remove_bg_bytes</span></span>(<span>self, input_bytes: bytes, out_path='nbg.png', size='preview', raw=True, data=None)</span>
 </code></dt>
 <dd>
@@ -899,7 +899,7 @@ ignored! </p>
     return self.__process_response__(response, raw, True, out_path)</code></pre>
 </details>
 </dd>
-<dt id="removebg.RemoveBg.remove_bg_file"><code class="name flex">
+<dt id="remove_bg_api.RemoveBg.remove_bg_file"><code class="name flex">
 <span>def <span class="ident">remove_bg_file</span></span>(<span>self, input_path: str, out_path='nbg.png', size='preview', raw=True, data=None)</span>
 </code></dt>
 <dd>
@@ -942,7 +942,7 @@ ignored! </p>
     return self.__process_response__(response, raw, True, out_path)</code></pre>
 </details>
 </dd>
-<dt id="removebg.RemoveBg.remove_bg_url"><code class="name flex">
+<dt id="remove_bg_api.RemoveBg.remove_bg_url"><code class="name flex">
 <span>def <span class="ident">remove_bg_url</span></span>(<span>self, input_url: str, out_path='nbg.png', size='preview', raw=True, data=None)</span>
 </code></dt>
 <dd>
@@ -984,7 +984,7 @@ ignored! </p>
     return self.__process_response__(response, raw, True, out_path)</code></pre>
 </details>
 </dd>
-<dt id="removebg.RemoveBg.send_request"><code class="name flex">
+<dt id="remove_bg_api.RemoveBg.send_request"><code class="name flex">
 <span>def <span class="ident">send_request</span></span>(<span>self, api_method: str, method: str, data=None)</span>
 </code></dt>
 <dd>
@@ -1047,37 +1047,37 @@ ignored! </p>
 <li><h3><a href="#header-classes">Classes</a></h3>
 <ul>
 <li>
-<h4><code><a title="removebg.Account" href="#removebg.Account">Account</a></code></h4>
+<h4><code><a title="remove_bg_api.Account" href="#remove_bg_api.Account">Account</a></code></h4>
 <ul class="">
-<li><code><a title="removebg.Account.balance" href="#removebg.Account.balance">balance</a></code></li>
-<li><code><a title="removebg.Account.free_api_calls" href="#removebg.Account.free_api_calls">free_api_calls</a></code></li>
-<li><code><a title="removebg.Account.get_all_info" href="#removebg.Account.get_all_info">get_all_info</a></code></li>
-<li><code><a title="removebg.Account.get_balance_dict" href="#removebg.Account.get_balance_dict">get_balance_dict</a></code></li>
-<li><code><a title="removebg.Account.refresh_balance" href="#removebg.Account.refresh_balance">refresh_balance</a></code></li>
+<li><code><a title="remove_bg_api.Account.balance" href="#remove_bg_api.Account.balance">balance</a></code></li>
+<li><code><a title="remove_bg_api.Account.free_api_calls" href="#remove_bg_api.Account.free_api_calls">free_api_calls</a></code></li>
+<li><code><a title="remove_bg_api.Account.get_all_info" href="#remove_bg_api.Account.get_all_info">get_all_info</a></code></li>
+<li><code><a title="remove_bg_api.Account.get_balance_dict" href="#remove_bg_api.Account.get_balance_dict">get_balance_dict</a></code></li>
+<li><code><a title="remove_bg_api.Account.refresh_balance" href="#remove_bg_api.Account.refresh_balance">refresh_balance</a></code></li>
 </ul>
 </li>
 <li>
-<h4><code><a title="removebg.Errors" href="#removebg.Errors">Errors</a></code></h4>
+<h4><code><a title="remove_bg_api.Errors" href="#remove_bg_api.Errors">Errors</a></code></h4>
 <ul class="">
-<li><code><a title="removebg.Errors.ApiErrorCode400" href="#removebg.Errors.ApiErrorCode400">ApiErrorCode400</a></code></li>
-<li><code><a title="removebg.Errors.ApiErrorCode402" href="#removebg.Errors.ApiErrorCode402">ApiErrorCode402</a></code></li>
-<li><code><a title="removebg.Errors.ApiErrorCode403" href="#removebg.Errors.ApiErrorCode403">ApiErrorCode403</a></code></li>
-<li><code><a title="removebg.Errors.ApiErrorCode429" href="#removebg.Errors.ApiErrorCode429">ApiErrorCode429</a></code></li>
-<li><code><a title="removebg.Errors.EmptyResponseDataError" href="#removebg.Errors.EmptyResponseDataError">EmptyResponseDataError</a></code></li>
-<li><code><a title="removebg.Errors.UnknownError" href="#removebg.Errors.UnknownError">UnknownError</a></code></li>
-<li><code><a title="removebg.Errors.WrongRequestMethodError" href="#removebg.Errors.WrongRequestMethodError">WrongRequestMethodError</a></code></li>
+<li><code><a title="remove_bg_api.Errors.ApiErrorCode400" href="#remove_bg_api.Errors.ApiErrorCode400">ApiErrorCode400</a></code></li>
+<li><code><a title="remove_bg_api.Errors.ApiErrorCode402" href="#remove_bg_api.Errors.ApiErrorCode402">ApiErrorCode402</a></code></li>
+<li><code><a title="remove_bg_api.Errors.ApiErrorCode403" href="#remove_bg_api.Errors.ApiErrorCode403">ApiErrorCode403</a></code></li>
+<li><code><a title="remove_bg_api.Errors.ApiErrorCode429" href="#remove_bg_api.Errors.ApiErrorCode429">ApiErrorCode429</a></code></li>
+<li><code><a title="remove_bg_api.Errors.EmptyResponseDataError" href="#remove_bg_api.Errors.EmptyResponseDataError">EmptyResponseDataError</a></code></li>
+<li><code><a title="remove_bg_api.Errors.UnknownError" href="#remove_bg_api.Errors.UnknownError">UnknownError</a></code></li>
+<li><code><a title="remove_bg_api.Errors.WrongRequestMethodError" href="#remove_bg_api.Errors.WrongRequestMethodError">WrongRequestMethodError</a></code></li>
 </ul>
 </li>
 <li>
-<h4><code><a title="removebg.RemoveBg" href="#removebg.RemoveBg">RemoveBg</a></code></h4>
+<h4><code><a title="remove_bg_api.RemoveBg" href="#remove_bg_api.RemoveBg">RemoveBg</a></code></h4>
 <ul class="two-column">
-<li><code><a title="removebg.RemoveBg.account" href="#removebg.RemoveBg.account">account</a></code></li>
-<li><code><a title="removebg.RemoveBg.change_api_key" href="#removebg.RemoveBg.change_api_key">change_api_key</a></code></li>
-<li><code><a title="removebg.RemoveBg.remove_bg_base64" href="#removebg.RemoveBg.remove_bg_base64">remove_bg_base64</a></code></li>
-<li><code><a title="removebg.RemoveBg.remove_bg_bytes" href="#removebg.RemoveBg.remove_bg_bytes">remove_bg_bytes</a></code></li>
-<li><code><a title="removebg.RemoveBg.remove_bg_file" href="#removebg.RemoveBg.remove_bg_file">remove_bg_file</a></code></li>
-<li><code><a title="removebg.RemoveBg.remove_bg_url" href="#removebg.RemoveBg.remove_bg_url">remove_bg_url</a></code></li>
-<li><code><a title="removebg.RemoveBg.send_request" href="#removebg.RemoveBg.send_request">send_request</a></code></li>
+<li><code><a title="remove_bg_api.RemoveBg.account" href="#remove_bg_api.RemoveBg.account">account</a></code></li>
+<li><code><a title="remove_bg_api.RemoveBg.change_api_key" href="#remove_bg_api.RemoveBg.change_api_key">change_api_key</a></code></li>
+<li><code><a title="remove_bg_api.RemoveBg.remove_bg_base64" href="#remove_bg_api.RemoveBg.remove_bg_base64">remove_bg_base64</a></code></li>
+<li><code><a title="remove_bg_api.RemoveBg.remove_bg_bytes" href="#remove_bg_api.RemoveBg.remove_bg_bytes">remove_bg_bytes</a></code></li>
+<li><code><a title="remove_bg_api.RemoveBg.remove_bg_file" href="#remove_bg_api.RemoveBg.remove_bg_file">remove_bg_file</a></code></li>
+<li><code><a title="remove_bg_api.RemoveBg.remove_bg_url" href="#remove_bg_api.RemoveBg.remove_bg_url">remove_bg_url</a></code></li>
+<li><code><a title="remove_bg_api.RemoveBg.send_request" href="#remove_bg_api.RemoveBg.send_request">send_request</a></code></li>
 </ul>
 </li>
 </ul>

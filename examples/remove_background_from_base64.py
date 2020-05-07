@@ -1,9 +1,9 @@
 """
-Description: removebg.py example
+Description: remove_bg_api example
 Author: Anodev (OPHoperHPO)[https://github.com/OPHoperHPO]
 License: MIT
 """
-from removebg import RemoveBg
+from remove_bg_api import RemoveBg
 from config import API_TOKEN
 
 def main():
