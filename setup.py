@@ -19,5 +19,6 @@ setup(
     author_email='netbook21@mail.ru',
     url='https://github.com/OPHoperHPO/removebg.py',
     license=lic,
+    long_description_content_type='text/markdown',
     packages=find_packages(exclude=('docs', 'examples'))
 )
