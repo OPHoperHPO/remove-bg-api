@@ -1,4 +1,4 @@
-# 🍰 `remove-bg.py` - remove.bg Python API Wrapper 🍰
+# 🍰 `removebg.py` - remove.bg Python API Wrapper 🍰
 ### Description:
 This library is used to interact with the *remove.bg* API to remove the background from the image. \
 **This library implements 100% API of this service.**
@@ -7,7 +7,7 @@ This library is used to interact with the *remove.bg* API to remove the backgrou
 ```requests```
 ### Setup:
 #### Simple install using pip:
-`pip3 install remove-bg.py`
+`pip3 install removebg.py`
 #### Install from source:
 * Clone this repository.
 * Install all the dependencies from **requirements.txt**: ```pip3 install -r requirements.txt```
@@ -16,7 +16,7 @@ This library is used to interact with the *remove.bg* API to remove the backgrou
 ### Examples:
 * **Remove background from image:** 
     ```
-    from remove_bg import RemoveBg
+    from removebg import RemoveBg
     # Initialize api wrapper
     removebg = RemoveBg(API_TOKEN)  
     # Send and save the finished image
@@ -26,7 +26,7 @@ This library is used to interact with the *remove.bg* API to remove the backgrou
     ```
 * **Show account total balance:** 
     ```
-    from remove_bg import RemoveBg
+    from removebg import RemoveBg
     removebg = RemoveBg("API_TOKEN")  # Initialize api wrapper
     print("Account total balance: ", removebg.account.balance())
     ```
