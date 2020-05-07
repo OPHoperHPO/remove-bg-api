@@ -12,7 +12,7 @@ This library is used to interact with the *remove.bg* API to remove the backgrou
 * Clone this repository.
 * Install all the dependencies from **requirements.txt**: ```pip3 install -r requirements.txt```
 * Install ``python3 setup.py install``
-### (Documentation)[]
+### [Documentation](https://ophoperhpo.github.io/removebg.py/)
 ### Examples:
 * **Remove background from image:** 
     ```
@@ -30,7 +30,7 @@ This library is used to interact with the *remove.bg* API to remove the backgrou
     removebg = RemoveBg("API_TOKEN")  # Initialize api wrapper
     print("Account total balance: ", removebg.account.balance())
     ```
-**See other examples in the `examples` folder.**
+**See other examples in the [examples](../master/examples/) folder.**
 ### TODO:
 ```
 1) Add asyncio support. (0% done)
