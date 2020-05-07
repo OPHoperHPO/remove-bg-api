@@ -7,19 +7,16 @@ from distutils.core import setup
 with open('README.md') as f:
     readme = f.read()
 
-with open('LICENSE') as f:
-    lic = f.read()
-
 setup(
-    name='removebg.py',
-    version='0.2.0',
+    name='remove_bg.py',
+    version='0.2.1',
     description='Remove.bg Python API Wrapper',
-    long_description=readme,
+    license='MIT',
     author='Anodev (OPHoperHPO)',
-    keywords = ['removebg.py', 'removebg', 'api', "wrapper"],
+    keywords = ['remove_bg.py', 'removebg', 'api', "wrapper"],
     author_email='netbook21@mail.ru',
     url='https://github.com/OPHoperHPO/removebg.py',
-    license=lic,
+    long_description=readme,
     long_description_content_type='text/markdown',
     packages=find_packages(exclude=('docs', 'examples')),
     classifiers=[
