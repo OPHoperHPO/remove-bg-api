@@ -1,0 +1,1094 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.8.1" />
+<title>removebg API documentation</title>
+<meta name="description" content="File: removebg.py …" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>removebg</code></h1>
+</header>
+<section id="section-intro">
+<p>File: removebg.py </p>
+<p>Description: Remove.bg Python API Wrapper </p>
+<p>Author: Anodev (OPHoperHPO) (<a href="https://github.com/OPHoperHPO">https://github.com/OPHoperHPO</a>) </p>
+<p>License: MIT</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">&#34;&#34;&#34;
+File: removebg.py \n
+Description: Remove.bg Python API Wrapper \n
+Author: Anodev (OPHoperHPO) (https://github.com/OPHoperHPO) \n
+License: MIT \n
+&#34;&#34;&#34;
+import requests
+
+API_URL = &#34;https://api.remove.bg/v1.0&#34;  # remove.bg API Server
+
+
+class RemoveBg(object):
+    &#34;&#34;&#34;
+    Remove.bg API wrapper object
+    &#34;&#34;&#34;
+
+    def __init__(self, api_key):
+        self.__api_key__ = api_key
+        self.account = Account(self)  # Init account object
+        &#34;&#34;&#34;Alias to Account object. USE ONLY THIS!&#34;&#34;&#34;
+
+    def remove_bg_bytes(self, input_bytes: bytes, out_path=&#34;nbg.png&#34;, size=&#34;preview&#34;, raw=True, data=None):
+        &#34;&#34;&#34;
+        Removes background from original_image bytes. \n
+        Returns either original_image bytes or the path to the final original_image file. \n
+        :param input_bytes: Image bytes. \n
+        :param out_path: The path to the final original_image. If a raw parameter is present, this parameter will be
+        ignored! \n
+        :param size: Image size. Optional! (default preview) \n
+        :param raw: Return images in bytes, or the path to the file. (True by default) \n
+        :param data: Image options. Optional! Look https://www.remove.bg/api \n
+        :type data: dict
+        &#34;&#34;&#34;
+        if data is None:
+            data = {
+                &#34;image_file&#34;: input_bytes,
+                &#34;format&#34;: &#34;auto&#34;,
+                &#39;type&#39;: &#34;auto&#34;,
+                &#39;size&#39;: size
+            }
+        else:
+            data[&#34;image_file&#34;] = input_bytes
+        response = self.send_request(&#34;removebg&#34;, &#34;POST&#34;, data)
+        return self.__process_response__(response, raw, True, out_path)
+
+    def change_api_key(self, token: str):
+        &#34;&#34;&#34;
+        Updates the api key with which the library was initialized. \n
+        :param token: New token.
+        &#34;&#34;&#34;
+        self.__api_key__ = token
+
+    def remove_bg_file(self, input_path: str, out_path=&#34;nbg.png&#34;, size=&#34;preview&#34;, raw=True, data=None):
+        &#34;&#34;&#34;
+        Removes background from original_image file. \n
+        Returns either original_image bytes or the path to the final original_image file. \n
+        :param input_path: The path to the original original_image. \n
+        :param out_path: The path to the final original_image. If a raw parameter is present, this parameter will be
+        ignored! \n
+        :param size: Image size. Optional! (default preview) \n
+        :param raw: Return images in bytes, or the path to the file. (True by default) \n
+        :param data: Image options. Optional! Look https://www.remove.bg/api \n
+        :type data: dict \n
+        &#34;&#34;&#34;
+        img = open(input_path, &#39;rb&#39;).read()
+        if data is None:
+            data = {
+                &#34;image_file&#34;: img,
+                &#34;format&#34;: &#34;auto&#34;,
+                &#39;type&#39;: &#34;auto&#34;,
+                &#39;size&#39;: size
+            }
+        else:
+            data[&#34;image_file&#34;] = img
+        response = self.send_request(&#34;removebg&#34;, &#34;POST&#34;, data)
+        return self.__process_response__(response, raw, True, out_path)
+
+    def remove_bg_url(self, input_url: str, out_path=&#34;nbg.png&#34;, size=&#34;preview&#34;, raw=True, data=None):
+        &#34;&#34;&#34;
+        Removes background from original_image by URL. \n
+        Returns either original_image bytes or the path to the final original_image file. \n
+        :param input_url: Image link. \n
+        :param out_path: The path to the final original_image. If a raw parameter is present, this parameter will be
+        ignored! \n
+        :param size: Image size. Optional! (default preview) \n
+        :param raw: Return images in bytes, or the path to the file. (True by default) \n
+        :param data: Image options. Optional! Look https://www.remove.bg/api \n
+        :type data: dict
+        &#34;&#34;&#34;
+        if data is None:
+            data = {
+                &#34;image_url&#34;: input_url,
+                &#34;format&#34;: &#34;auto&#34;,
+                &#39;type&#39;: &#34;auto&#34;,
+                &#39;size&#39;: size
+            }
+        else:
+            data[&#34;image_url&#34;] = input_url
+        response = self.send_request(&#34;removebg&#34;, &#34;POST&#34;, data)
+        return self.__process_response__(response, raw, True, out_path)
+
+    def remove_bg_base64(self, input_base64, out_path=&#34;nbg.png&#34;, size=&#34;preview&#34;, raw=True, data=None):
+        &#34;&#34;&#34;
+        Removes background from input image by URL. \n
+        Returns either original_image bytes or the path to the final original_image file. \n
+        :param input_base64: Base64 encoded original_image. \n
+        :param out_path: The path to the final original_image. If a raw parameter is present, this parameter will be
+        ignored! \n
+        :param size: Image size. Optional! (default preview) \n
+        :param raw: Return images in bytes, or the path to the file. (True by default) \n
+        :param data: Image options. Optional! Look https://www.remove.bg/api \n
+        :type data: dict
+        &#34;&#34;&#34;
+        if data is None:
+            data = {
+                &#34;image_file_b64&#34;: input_base64,
+                &#34;format&#34;: &#34;auto&#34;,
+                &#39;type&#39;: &#34;auto&#34;,
+                &#39;size&#39;: size
+            }
+        else:
+            data[&#34;image_file_b64&#34;] = input_base64
+        response = self.send_request(&#34;removebg&#34;, &#34;POST&#34;, data)
+        return self.__process_response__(response, raw, True, out_path)
+
+    def send_request(self, api_method: str, method: str, data=None):
+        &#34;&#34;&#34;
+        Sends a request to the remove.bg server. \n
+        :param api_method: API Method Look https://www.remove.bg/api \n
+        :param method: Requests Method. &#34;GET&#34; or &#34;POST&#34;. \n
+        :param data: Data to send. Dict. Look https://www.remove.bg/api \n
+        :type data: dict \n
+        :return: Requests response object.
+        &#34;&#34;&#34;
+        if data is None:
+            data = {}
+        if method == &#34;POST&#34;:  # sending a post request
+            if data:
+                files = None
+                if &#34;image_file&#34; in data.keys():
+                    files = {&#39;image_file&#39;: data[&#34;image_file&#34;]}
+                    del data[&#34;image_file&#34;]
+                response = requests.post(
+                    API_URL + &#39;/&#39; + api_method,
+                    data=data, files=files,
+                    headers={&#39;X-Api-Key&#39;: self.__api_key__}
+                )
+                return response
+            else:
+                raise Errors.EmptyResponseDataError
+        elif method == &#34;GET&#34;:  # sending a get request
+            response = requests.get(
+                API_URL + &#39;/&#39; + api_method,
+                headers={&#39;X-Api-Key&#39;: self.__api_key__}
+            )
+            return response
+        else:
+            raise Errors.WrongRequestMethodError  # raise error when method wrong
+
+    def __process_response__(self, response: requests.Response, raw_b: bool, process_image=False,
+                             output_file=&#34;nbg.png&#34;):
+        &#34;&#34;&#34;
+        Processes response from requests.bg servers.\n
+        If any error appears, raises it up! \n
+        :param response: Requests response object. \n
+        :param output_file: Output file path. \b
+        :param raw_b: Return raw bytes of original_image or path to original_image. \n
+        :param process_image: Process original_image or not. \n
+        :param output_file The path to output file. \n
+        :return Image bytes or original_image path or response body in json
+        &#34;&#34;&#34;
+        if response.status_code == 200:  # Image background removed or all ok
+            if process_image is True:
+                credits_charged = response.headers[&#34;X-Credits-Charged&#34;]  # We monitor the change in account balance.
+                self.account.__local_balance__ -= int(credits_charged)
+                if not raw_b:
+                    with open(output_file, &#39;wb&#39;) as f:
+                        f.write(response.content)
+                    return output_file
+                else:
+                    return response.content
+            else:
+                return response.json()
+        elif response.status_code == 400:
+            raise Errors.ApiErrorCode400  # API Error: Invalid parameters or original_image file unprocessable
+        elif response.status_code == 402:
+            raise Errors.ApiErrorCode402  # API Error: Insufficient credits
+        elif response.status_code == 403:
+            raise Errors.ApiErrorCode403  # API Error: Authentication failed
+        elif response.status_code == 429:
+            raise Errors.ApiErrorCode429  # API Error: Rate limit exceeded
+        else:
+            raise Errors.UnknownError
+
+
+class Account(object):
+    &#34;&#34;&#34;
+    Remove.bg Account object
+    &#34;&#34;&#34;
+
+    def __init__(self, parent):
+        self.__parent__ = parent
+        self.__local_balance__ = None
+        self.refresh_balance()  # Set local balance
+
+    def balance(self):
+        &#34;&#34;&#34;
+        Returns the current local account balance as the number of ALL credits. \n
+        :return: Returns the current local account balance as the number of ALL credits.
+        &#34;&#34;&#34;
+        return self.__local_balance__
+
+    def refresh_balance(self):
+        &#34;&#34;&#34;
+        Updates the local account balance.
+        &#34;&#34;&#34;
+        self.__local_balance__ = self.get_all_info()[&#34;data&#34;][&#34;attributes&#34;][&#34;credits&#34;][&#34;total&#34;]
+
+    def get_balance_dict(self):
+        &#34;&#34;&#34;
+        Gets the current account balance. This method also updates the local balance! \n
+        :return: Returns a dictionary with the current account balance.
+        &#34;&#34;&#34;
+        data = self.get_all_info()
+        self.__local_balance__ = data[&#34;data&#34;][&#34;attributes&#34;][&#34;credits&#34;][&#34;total&#34;]  # Update local balance
+        return data[&#34;data&#34;][&#34;attributes&#34;][&#34;credits&#34;]
+
+    def free_api_calls(self):
+        &#34;&#34;&#34;
+        Gets the current account free api calls. \n
+        :return: Returns a dictionary with the current account free api calls.
+        &#34;&#34;&#34;
+        return self.get_all_info()[&#34;data&#34;][&#34;attributes&#34;][&#34;api&#34;][&#34;free_calls&#34;]
+
+    def get_all_info(self):
+        &#34;&#34;&#34;
+        Retrieves account information. \n
+        Returns a dictionary with all account information. \n
+        To view the dictionary layout, see https://www.remove.bg/api
+        &#34;&#34;&#34;
+        response = self.__parent__.send_request(&#34;account&#34;, &#34;GET&#34;)
+        return self.__parent__.__process_response__(response, False)
+
+
+class Errors:
+    &#34;&#34;&#34;This class contains all errors that may occur during operation.&#34;&#34;&#34;
+
+    class ApiErrorCode400(Exception):
+        &#34;&#34;&#34;API Error: Invalid parameters or original_image file unprocessable&#34;&#34;&#34;
+
+        def __str__(self):
+            self.txt = &#34;API Error: Invalid parameters or original_image file unprocessable.\n&#34; \
+                       &#34;Something is wrong with the parameters or original_image file.&#34;
+            return self.txt
+
+    class ApiErrorCode402(Exception):
+        &#34;&#34;&#34;API Error: Insufficient credits (no credits charged)&#34;&#34;&#34;
+
+        def __str__(self):
+            self.txt = &#34;API Error: Insufficient credits.\n&#34; \
+                       &#34;Buy some credits on remove.bg.&#34;
+            return self.txt
+
+    class ApiErrorCode403(Exception):
+        &#34;&#34;&#34;API Error: Authentication failed.&#34;&#34;&#34;
+
+        def __str__(self):
+            self.txt = &#34;API Error: Authentication failed.\n&#34; \
+                       &#34;Specify the correct API key. &#34;
+            return self.txt
+
+    class ApiErrorCode429(Exception):
+        &#34;&#34;&#34;API Error:  Rate limit exceeded.&#34;&#34;&#34;
+
+        def __str__(self):
+            self.txt = &#34;API Error: Rate limit exceeded.&#34;
+            return self.txt
+
+    class WrongRequestMethodError(Exception):
+        &#34;&#34;&#34;API Wrapper Error: A nonexistent method for sending a request to remove.bg servers is indicated. &#34;&#34;&#34;
+
+        def __str__(self):
+            self.txt = &#34;API Wrapper Error: &#34; \
+                       &#34;A nonexistent method for sending a request to remove.bg servers is indicated.\n&#34; \
+                       &#34;Look https://www.remove.bg/api.&#34;
+            return self.txt
+
+    class EmptyResponseDataError(Exception):
+        &#34;&#34;&#34;API Wrapper Error: Attempt to send empty data to remove.bg server using POST request.&#34;&#34;&#34;
+
+        def __str__(self):
+            self.txt = &#34;API Wrapper Error: Attempt to send empty data to remove.bg server using POST request.\n&#34; \
+                       &#34;Look https://www.remove.bg/api.&#34;
+            return self.txt
+
+    class UnknownError(Exception):
+        &#34;&#34;&#34;API Error: Unknown Error&#34;&#34;&#34;
+
+        def __str__(self):
+            self.txt = &#34;API Error: Unknown Error!&#34;
+            return self.txt</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="removebg.Account"><code class="flex name class">
+<span>class <span class="ident">Account</span></span>
+<span>(</span><span>parent)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove.bg Account object</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Account(object):
+    &#34;&#34;&#34;
+    Remove.bg Account object
+    &#34;&#34;&#34;
+
+    def __init__(self, parent):
+        self.__parent__ = parent
+        self.__local_balance__ = None
+        self.refresh_balance()  # Set local balance
+
+    def balance(self):
+        &#34;&#34;&#34;
+        Returns the current local account balance as the number of ALL credits. \n
+        :return: Returns the current local account balance as the number of ALL credits.
+        &#34;&#34;&#34;
+        return self.__local_balance__
+
+    def refresh_balance(self):
+        &#34;&#34;&#34;
+        Updates the local account balance.
+        &#34;&#34;&#34;
+        self.__local_balance__ = self.get_all_info()[&#34;data&#34;][&#34;attributes&#34;][&#34;credits&#34;][&#34;total&#34;]
+
+    def get_balance_dict(self):
+        &#34;&#34;&#34;
+        Gets the current account balance. This method also updates the local balance! \n
+        :return: Returns a dictionary with the current account balance.
+        &#34;&#34;&#34;
+        data = self.get_all_info()
+        self.__local_balance__ = data[&#34;data&#34;][&#34;attributes&#34;][&#34;credits&#34;][&#34;total&#34;]  # Update local balance
+        return data[&#34;data&#34;][&#34;attributes&#34;][&#34;credits&#34;]
+
+    def free_api_calls(self):
+        &#34;&#34;&#34;
+        Gets the current account free api calls. \n
+        :return: Returns a dictionary with the current account free api calls.
+        &#34;&#34;&#34;
+        return self.get_all_info()[&#34;data&#34;][&#34;attributes&#34;][&#34;api&#34;][&#34;free_calls&#34;]
+
+    def get_all_info(self):
+        &#34;&#34;&#34;
+        Retrieves account information. \n
+        Returns a dictionary with all account information. \n
+        To view the dictionary layout, see https://www.remove.bg/api
+        &#34;&#34;&#34;
+        response = self.__parent__.send_request(&#34;account&#34;, &#34;GET&#34;)
+        return self.__parent__.__process_response__(response, False)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="removebg.Account.balance"><code class="name flex">
+<span>def <span class="ident">balance</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns the current local account balance as the number of ALL credits. </p>
+<p>:return: Returns the current local account balance as the number of ALL credits.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def balance(self):
+    &#34;&#34;&#34;
+    Returns the current local account balance as the number of ALL credits. \n
+    :return: Returns the current local account balance as the number of ALL credits.
+    &#34;&#34;&#34;
+    return self.__local_balance__</code></pre>
+</details>
+</dd>
+<dt id="removebg.Account.free_api_calls"><code class="name flex">
+<span>def <span class="ident">free_api_calls</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets the current account free api calls. </p>
+<p>:return: Returns a dictionary with the current account free api calls.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def free_api_calls(self):
+    &#34;&#34;&#34;
+    Gets the current account free api calls. \n
+    :return: Returns a dictionary with the current account free api calls.
+    &#34;&#34;&#34;
+    return self.get_all_info()[&#34;data&#34;][&#34;attributes&#34;][&#34;api&#34;][&#34;free_calls&#34;]</code></pre>
+</details>
+</dd>
+<dt id="removebg.Account.get_all_info"><code class="name flex">
+<span>def <span class="ident">get_all_info</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Retrieves account information. </p>
+<p>Returns a dictionary with all account information. </p>
+<p>To view the dictionary layout, see <a href="https://www.remove.bg/api">https://www.remove.bg/api</a></p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_all_info(self):
+    &#34;&#34;&#34;
+    Retrieves account information. \n
+    Returns a dictionary with all account information. \n
+    To view the dictionary layout, see https://www.remove.bg/api
+    &#34;&#34;&#34;
+    response = self.__parent__.send_request(&#34;account&#34;, &#34;GET&#34;)
+    return self.__parent__.__process_response__(response, False)</code></pre>
+</details>
+</dd>
+<dt id="removebg.Account.get_balance_dict"><code class="name flex">
+<span>def <span class="ident">get_balance_dict</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets the current account balance. This method also updates the local balance! </p>
+<p>:return: Returns a dictionary with the current account balance.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_balance_dict(self):
+    &#34;&#34;&#34;
+    Gets the current account balance. This method also updates the local balance! \n
+    :return: Returns a dictionary with the current account balance.
+    &#34;&#34;&#34;
+    data = self.get_all_info()
+    self.__local_balance__ = data[&#34;data&#34;][&#34;attributes&#34;][&#34;credits&#34;][&#34;total&#34;]  # Update local balance
+    return data[&#34;data&#34;][&#34;attributes&#34;][&#34;credits&#34;]</code></pre>
+</details>
+</dd>
+<dt id="removebg.Account.refresh_balance"><code class="name flex">
+<span>def <span class="ident">refresh_balance</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Updates the local account balance.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def refresh_balance(self):
+    &#34;&#34;&#34;
+    Updates the local account balance.
+    &#34;&#34;&#34;
+    self.__local_balance__ = self.get_all_info()[&#34;data&#34;][&#34;attributes&#34;][&#34;credits&#34;][&#34;total&#34;]</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="removebg.Errors"><code class="flex name class">
+<span>class <span class="ident">Errors</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>This class contains all errors that may occur during operation.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Errors:
+    &#34;&#34;&#34;This class contains all errors that may occur during operation.&#34;&#34;&#34;
+
+    class ApiErrorCode400(Exception):
+        &#34;&#34;&#34;API Error: Invalid parameters or original_image file unprocessable&#34;&#34;&#34;
+
+        def __str__(self):
+            self.txt = &#34;API Error: Invalid parameters or original_image file unprocessable.\n&#34; \
+                       &#34;Something is wrong with the parameters or original_image file.&#34;
+            return self.txt
+
+    class ApiErrorCode402(Exception):
+        &#34;&#34;&#34;API Error: Insufficient credits (no credits charged)&#34;&#34;&#34;
+
+        def __str__(self):
+            self.txt = &#34;API Error: Insufficient credits.\n&#34; \
+                       &#34;Buy some credits on remove.bg.&#34;
+            return self.txt
+
+    class ApiErrorCode403(Exception):
+        &#34;&#34;&#34;API Error: Authentication failed.&#34;&#34;&#34;
+
+        def __str__(self):
+            self.txt = &#34;API Error: Authentication failed.\n&#34; \
+                       &#34;Specify the correct API key. &#34;
+            return self.txt
+
+    class ApiErrorCode429(Exception):
+        &#34;&#34;&#34;API Error:  Rate limit exceeded.&#34;&#34;&#34;
+
+        def __str__(self):
+            self.txt = &#34;API Error: Rate limit exceeded.&#34;
+            return self.txt
+
+    class WrongRequestMethodError(Exception):
+        &#34;&#34;&#34;API Wrapper Error: A nonexistent method for sending a request to remove.bg servers is indicated. &#34;&#34;&#34;
+
+        def __str__(self):
+            self.txt = &#34;API Wrapper Error: &#34; \
+                       &#34;A nonexistent method for sending a request to remove.bg servers is indicated.\n&#34; \
+                       &#34;Look https://www.remove.bg/api.&#34;
+            return self.txt
+
+    class EmptyResponseDataError(Exception):
+        &#34;&#34;&#34;API Wrapper Error: Attempt to send empty data to remove.bg server using POST request.&#34;&#34;&#34;
+
+        def __str__(self):
+            self.txt = &#34;API Wrapper Error: Attempt to send empty data to remove.bg server using POST request.\n&#34; \
+                       &#34;Look https://www.remove.bg/api.&#34;
+            return self.txt
+
+    class UnknownError(Exception):
+        &#34;&#34;&#34;API Error: Unknown Error&#34;&#34;&#34;
+
+        def __str__(self):
+            self.txt = &#34;API Error: Unknown Error!&#34;
+            return self.txt</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="removebg.Errors.ApiErrorCode400"><code class="name">var <span class="ident">ApiErrorCode400</span></code></dt>
+<dd>
+<div class="desc"><p>API Error: Invalid parameters or original_image file unprocessable</p></div>
+</dd>
+<dt id="removebg.Errors.ApiErrorCode402"><code class="name">var <span class="ident">ApiErrorCode402</span></code></dt>
+<dd>
+<div class="desc"><p>API Error: Insufficient credits (no credits charged)</p></div>
+</dd>
+<dt id="removebg.Errors.ApiErrorCode403"><code class="name">var <span class="ident">ApiErrorCode403</span></code></dt>
+<dd>
+<div class="desc"><p>API Error: Authentication failed.</p></div>
+</dd>
+<dt id="removebg.Errors.ApiErrorCode429"><code class="name">var <span class="ident">ApiErrorCode429</span></code></dt>
+<dd>
+<div class="desc"><p>API Error:
+Rate limit exceeded.</p></div>
+</dd>
+<dt id="removebg.Errors.EmptyResponseDataError"><code class="name">var <span class="ident">EmptyResponseDataError</span></code></dt>
+<dd>
+<div class="desc"><p>API Wrapper Error: Attempt to send empty data to remove.bg server using POST request.</p></div>
+</dd>
+<dt id="removebg.Errors.UnknownError"><code class="name">var <span class="ident">UnknownError</span></code></dt>
+<dd>
+<div class="desc"><p>API Error: Unknown Error</p></div>
+</dd>
+<dt id="removebg.Errors.WrongRequestMethodError"><code class="name">var <span class="ident">WrongRequestMethodError</span></code></dt>
+<dd>
+<div class="desc"><p>API Wrapper Error: A nonexistent method for sending a request to remove.bg servers is indicated.</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="removebg.RemoveBg"><code class="flex name class">
+<span>class <span class="ident">RemoveBg</span></span>
+<span>(</span><span>api_key)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Remove.bg API wrapper object</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class RemoveBg(object):
+    &#34;&#34;&#34;
+    Remove.bg API wrapper object
+    &#34;&#34;&#34;
+
+    def __init__(self, api_key):
+        self.__api_key__ = api_key
+        self.account = Account(self)  # Init account object
+        &#34;&#34;&#34;Alias to Account object. USE ONLY THIS!&#34;&#34;&#34;
+
+    def remove_bg_bytes(self, input_bytes: bytes, out_path=&#34;nbg.png&#34;, size=&#34;preview&#34;, raw=True, data=None):
+        &#34;&#34;&#34;
+        Removes background from original_image bytes. \n
+        Returns either original_image bytes or the path to the final original_image file. \n
+        :param input_bytes: Image bytes. \n
+        :param out_path: The path to the final original_image. If a raw parameter is present, this parameter will be
+        ignored! \n
+        :param size: Image size. Optional! (default preview) \n
+        :param raw: Return images in bytes, or the path to the file. (True by default) \n
+        :param data: Image options. Optional! Look https://www.remove.bg/api \n
+        :type data: dict
+        &#34;&#34;&#34;
+        if data is None:
+            data = {
+                &#34;image_file&#34;: input_bytes,
+                &#34;format&#34;: &#34;auto&#34;,
+                &#39;type&#39;: &#34;auto&#34;,
+                &#39;size&#39;: size
+            }
+        else:
+            data[&#34;image_file&#34;] = input_bytes
+        response = self.send_request(&#34;removebg&#34;, &#34;POST&#34;, data)
+        return self.__process_response__(response, raw, True, out_path)
+
+    def change_api_key(self, token: str):
+        &#34;&#34;&#34;
+        Updates the api key with which the library was initialized. \n
+        :param token: New token.
+        &#34;&#34;&#34;
+        self.__api_key__ = token
+
+    def remove_bg_file(self, input_path: str, out_path=&#34;nbg.png&#34;, size=&#34;preview&#34;, raw=True, data=None):
+        &#34;&#34;&#34;
+        Removes background from original_image file. \n
+        Returns either original_image bytes or the path to the final original_image file. \n
+        :param input_path: The path to the original original_image. \n
+        :param out_path: The path to the final original_image. If a raw parameter is present, this parameter will be
+        ignored! \n
+        :param size: Image size. Optional! (default preview) \n
+        :param raw: Return images in bytes, or the path to the file. (True by default) \n
+        :param data: Image options. Optional! Look https://www.remove.bg/api \n
+        :type data: dict \n
+        &#34;&#34;&#34;
+        img = open(input_path, &#39;rb&#39;).read()
+        if data is None:
+            data = {
+                &#34;image_file&#34;: img,
+                &#34;format&#34;: &#34;auto&#34;,
+                &#39;type&#39;: &#34;auto&#34;,
+                &#39;size&#39;: size
+            }
+        else:
+            data[&#34;image_file&#34;] = img
+        response = self.send_request(&#34;removebg&#34;, &#34;POST&#34;, data)
+        return self.__process_response__(response, raw, True, out_path)
+
+    def remove_bg_url(self, input_url: str, out_path=&#34;nbg.png&#34;, size=&#34;preview&#34;, raw=True, data=None):
+        &#34;&#34;&#34;
+        Removes background from original_image by URL. \n
+        Returns either original_image bytes or the path to the final original_image file. \n
+        :param input_url: Image link. \n
+        :param out_path: The path to the final original_image. If a raw parameter is present, this parameter will be
+        ignored! \n
+        :param size: Image size. Optional! (default preview) \n
+        :param raw: Return images in bytes, or the path to the file. (True by default) \n
+        :param data: Image options. Optional! Look https://www.remove.bg/api \n
+        :type data: dict
+        &#34;&#34;&#34;
+        if data is None:
+            data = {
+                &#34;image_url&#34;: input_url,
+                &#34;format&#34;: &#34;auto&#34;,
+                &#39;type&#39;: &#34;auto&#34;,
+                &#39;size&#39;: size
+            }
+        else:
+            data[&#34;image_url&#34;] = input_url
+        response = self.send_request(&#34;removebg&#34;, &#34;POST&#34;, data)
+        return self.__process_response__(response, raw, True, out_path)
+
+    def remove_bg_base64(self, input_base64, out_path=&#34;nbg.png&#34;, size=&#34;preview&#34;, raw=True, data=None):
+        &#34;&#34;&#34;
+        Removes background from input image by URL. \n
+        Returns either original_image bytes or the path to the final original_image file. \n
+        :param input_base64: Base64 encoded original_image. \n
+        :param out_path: The path to the final original_image. If a raw parameter is present, this parameter will be
+        ignored! \n
+        :param size: Image size. Optional! (default preview) \n
+        :param raw: Return images in bytes, or the path to the file. (True by default) \n
+        :param data: Image options. Optional! Look https://www.remove.bg/api \n
+        :type data: dict
+        &#34;&#34;&#34;
+        if data is None:
+            data = {
+                &#34;image_file_b64&#34;: input_base64,
+                &#34;format&#34;: &#34;auto&#34;,
+                &#39;type&#39;: &#34;auto&#34;,
+                &#39;size&#39;: size
+            }
+        else:
+            data[&#34;image_file_b64&#34;] = input_base64
+        response = self.send_request(&#34;removebg&#34;, &#34;POST&#34;, data)
+        return self.__process_response__(response, raw, True, out_path)
+
+    def send_request(self, api_method: str, method: str, data=None):
+        &#34;&#34;&#34;
+        Sends a request to the remove.bg server. \n
+        :param api_method: API Method Look https://www.remove.bg/api \n
+        :param method: Requests Method. &#34;GET&#34; or &#34;POST&#34;. \n
+        :param data: Data to send. Dict. Look https://www.remove.bg/api \n
+        :type data: dict \n
+        :return: Requests response object.
+        &#34;&#34;&#34;
+        if data is None:
+            data = {}
+        if method == &#34;POST&#34;:  # sending a post request
+            if data:
+                files = None
+                if &#34;image_file&#34; in data.keys():
+                    files = {&#39;image_file&#39;: data[&#34;image_file&#34;]}
+                    del data[&#34;image_file&#34;]
+                response = requests.post(
+                    API_URL + &#39;/&#39; + api_method,
+                    data=data, files=files,
+                    headers={&#39;X-Api-Key&#39;: self.__api_key__}
+                )
+                return response
+            else:
+                raise Errors.EmptyResponseDataError
+        elif method == &#34;GET&#34;:  # sending a get request
+            response = requests.get(
+                API_URL + &#39;/&#39; + api_method,
+                headers={&#39;X-Api-Key&#39;: self.__api_key__}
+            )
+            return response
+        else:
+            raise Errors.WrongRequestMethodError  # raise error when method wrong
+
+    def __process_response__(self, response: requests.Response, raw_b: bool, process_image=False,
+                             output_file=&#34;nbg.png&#34;):
+        &#34;&#34;&#34;
+        Processes response from requests.bg servers.\n
+        If any error appears, raises it up! \n
+        :param response: Requests response object. \n
+        :param output_file: Output file path. \b
+        :param raw_b: Return raw bytes of original_image or path to original_image. \n
+        :param process_image: Process original_image or not. \n
+        :param output_file The path to output file. \n
+        :return Image bytes or original_image path or response body in json
+        &#34;&#34;&#34;
+        if response.status_code == 200:  # Image background removed or all ok
+            if process_image is True:
+                credits_charged = response.headers[&#34;X-Credits-Charged&#34;]  # We monitor the change in account balance.
+                self.account.__local_balance__ -= int(credits_charged)
+                if not raw_b:
+                    with open(output_file, &#39;wb&#39;) as f:
+                        f.write(response.content)
+                    return output_file
+                else:
+                    return response.content
+            else:
+                return response.json()
+        elif response.status_code == 400:
+            raise Errors.ApiErrorCode400  # API Error: Invalid parameters or original_image file unprocessable
+        elif response.status_code == 402:
+            raise Errors.ApiErrorCode402  # API Error: Insufficient credits
+        elif response.status_code == 403:
+            raise Errors.ApiErrorCode403  # API Error: Authentication failed
+        elif response.status_code == 429:
+            raise Errors.ApiErrorCode429  # API Error: Rate limit exceeded
+        else:
+            raise Errors.UnknownError</code></pre>
+</details>
+<h3>Instance variables</h3>
+<dl>
+<dt id="removebg.RemoveBg.account"><code class="name">var <span class="ident">account</span></code></dt>
+<dd>
+<div class="desc"><p>Alias to Account object. USE ONLY THIS!</p></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="removebg.RemoveBg.change_api_key"><code class="name flex">
+<span>def <span class="ident">change_api_key</span></span>(<span>self, token: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Updates the api key with which the library was initialized. </p>
+<p>:param token: New token.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def change_api_key(self, token: str):
+    &#34;&#34;&#34;
+    Updates the api key with which the library was initialized. \n
+    :param token: New token.
+    &#34;&#34;&#34;
+    self.__api_key__ = token</code></pre>
+</details>
+</dd>
+<dt id="removebg.RemoveBg.remove_bg_base64"><code class="name flex">
+<span>def <span class="ident">remove_bg_base64</span></span>(<span>self, input_base64, out_path='nbg.png', size='preview', raw=True, data=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Removes background from input image by URL. </p>
+<p>Returns either original_image bytes or the path to the final original_image file. </p>
+<p>:param input_base64: Base64 encoded original_image. </p>
+<p>:param out_path: The path to the final original_image. If a raw parameter is present, this parameter will be
+ignored! </p>
+<p>:param size: Image size. Optional! (default preview) </p>
+<p>:param raw: Return images in bytes, or the path to the file. (True by default) </p>
+<p>:param data: Image options. Optional! Look <a href="https://www.remove.bg/api">https://www.remove.bg/api</a> </p>
+<p>:type data: dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def remove_bg_base64(self, input_base64, out_path=&#34;nbg.png&#34;, size=&#34;preview&#34;, raw=True, data=None):
+    &#34;&#34;&#34;
+    Removes background from input image by URL. \n
+    Returns either original_image bytes or the path to the final original_image file. \n
+    :param input_base64: Base64 encoded original_image. \n
+    :param out_path: The path to the final original_image. If a raw parameter is present, this parameter will be
+    ignored! \n
+    :param size: Image size. Optional! (default preview) \n
+    :param raw: Return images in bytes, or the path to the file. (True by default) \n
+    :param data: Image options. Optional! Look https://www.remove.bg/api \n
+    :type data: dict
+    &#34;&#34;&#34;
+    if data is None:
+        data = {
+            &#34;image_file_b64&#34;: input_base64,
+            &#34;format&#34;: &#34;auto&#34;,
+            &#39;type&#39;: &#34;auto&#34;,
+            &#39;size&#39;: size
+        }
+    else:
+        data[&#34;image_file_b64&#34;] = input_base64
+    response = self.send_request(&#34;removebg&#34;, &#34;POST&#34;, data)
+    return self.__process_response__(response, raw, True, out_path)</code></pre>
+</details>
+</dd>
+<dt id="removebg.RemoveBg.remove_bg_bytes"><code class="name flex">
+<span>def <span class="ident">remove_bg_bytes</span></span>(<span>self, input_bytes: bytes, out_path='nbg.png', size='preview', raw=True, data=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Removes background from original_image bytes. </p>
+<p>Returns either original_image bytes or the path to the final original_image file. </p>
+<p>:param input_bytes: Image bytes. </p>
+<p>:param out_path: The path to the final original_image. If a raw parameter is present, this parameter will be
+ignored! </p>
+<p>:param size: Image size. Optional! (default preview) </p>
+<p>:param raw: Return images in bytes, or the path to the file. (True by default) </p>
+<p>:param data: Image options. Optional! Look <a href="https://www.remove.bg/api">https://www.remove.bg/api</a> </p>
+<p>:type data: dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def remove_bg_bytes(self, input_bytes: bytes, out_path=&#34;nbg.png&#34;, size=&#34;preview&#34;, raw=True, data=None):
+    &#34;&#34;&#34;
+    Removes background from original_image bytes. \n
+    Returns either original_image bytes or the path to the final original_image file. \n
+    :param input_bytes: Image bytes. \n
+    :param out_path: The path to the final original_image. If a raw parameter is present, this parameter will be
+    ignored! \n
+    :param size: Image size. Optional! (default preview) \n
+    :param raw: Return images in bytes, or the path to the file. (True by default) \n
+    :param data: Image options. Optional! Look https://www.remove.bg/api \n
+    :type data: dict
+    &#34;&#34;&#34;
+    if data is None:
+        data = {
+            &#34;image_file&#34;: input_bytes,
+            &#34;format&#34;: &#34;auto&#34;,
+            &#39;type&#39;: &#34;auto&#34;,
+            &#39;size&#39;: size
+        }
+    else:
+        data[&#34;image_file&#34;] = input_bytes
+    response = self.send_request(&#34;removebg&#34;, &#34;POST&#34;, data)
+    return self.__process_response__(response, raw, True, out_path)</code></pre>
+</details>
+</dd>
+<dt id="removebg.RemoveBg.remove_bg_file"><code class="name flex">
+<span>def <span class="ident">remove_bg_file</span></span>(<span>self, input_path: str, out_path='nbg.png', size='preview', raw=True, data=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Removes background from original_image file. </p>
+<p>Returns either original_image bytes or the path to the final original_image file. </p>
+<p>:param input_path: The path to the original original_image. </p>
+<p>:param out_path: The path to the final original_image. If a raw parameter is present, this parameter will be
+ignored! </p>
+<p>:param size: Image size. Optional! (default preview) </p>
+<p>:param raw: Return images in bytes, or the path to the file. (True by default) </p>
+<p>:param data: Image options. Optional! Look <a href="https://www.remove.bg/api">https://www.remove.bg/api</a> </p>
+<p>:type data: dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def remove_bg_file(self, input_path: str, out_path=&#34;nbg.png&#34;, size=&#34;preview&#34;, raw=True, data=None):
+    &#34;&#34;&#34;
+    Removes background from original_image file. \n
+    Returns either original_image bytes or the path to the final original_image file. \n
+    :param input_path: The path to the original original_image. \n
+    :param out_path: The path to the final original_image. If a raw parameter is present, this parameter will be
+    ignored! \n
+    :param size: Image size. Optional! (default preview) \n
+    :param raw: Return images in bytes, or the path to the file. (True by default) \n
+    :param data: Image options. Optional! Look https://www.remove.bg/api \n
+    :type data: dict \n
+    &#34;&#34;&#34;
+    img = open(input_path, &#39;rb&#39;).read()
+    if data is None:
+        data = {
+            &#34;image_file&#34;: img,
+            &#34;format&#34;: &#34;auto&#34;,
+            &#39;type&#39;: &#34;auto&#34;,
+            &#39;size&#39;: size
+        }
+    else:
+        data[&#34;image_file&#34;] = img
+    response = self.send_request(&#34;removebg&#34;, &#34;POST&#34;, data)
+    return self.__process_response__(response, raw, True, out_path)</code></pre>
+</details>
+</dd>
+<dt id="removebg.RemoveBg.remove_bg_url"><code class="name flex">
+<span>def <span class="ident">remove_bg_url</span></span>(<span>self, input_url: str, out_path='nbg.png', size='preview', raw=True, data=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Removes background from original_image by URL. </p>
+<p>Returns either original_image bytes or the path to the final original_image file. </p>
+<p>:param input_url: Image link. </p>
+<p>:param out_path: The path to the final original_image. If a raw parameter is present, this parameter will be
+ignored! </p>
+<p>:param size: Image size. Optional! (default preview) </p>
+<p>:param raw: Return images in bytes, or the path to the file. (True by default) </p>
+<p>:param data: Image options. Optional! Look <a href="https://www.remove.bg/api">https://www.remove.bg/api</a> </p>
+<p>:type data: dict</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def remove_bg_url(self, input_url: str, out_path=&#34;nbg.png&#34;, size=&#34;preview&#34;, raw=True, data=None):
+    &#34;&#34;&#34;
+    Removes background from original_image by URL. \n
+    Returns either original_image bytes or the path to the final original_image file. \n
+    :param input_url: Image link. \n
+    :param out_path: The path to the final original_image. If a raw parameter is present, this parameter will be
+    ignored! \n
+    :param size: Image size. Optional! (default preview) \n
+    :param raw: Return images in bytes, or the path to the file. (True by default) \n
+    :param data: Image options. Optional! Look https://www.remove.bg/api \n
+    :type data: dict
+    &#34;&#34;&#34;
+    if data is None:
+        data = {
+            &#34;image_url&#34;: input_url,
+            &#34;format&#34;: &#34;auto&#34;,
+            &#39;type&#39;: &#34;auto&#34;,
+            &#39;size&#39;: size
+        }
+    else:
+        data[&#34;image_url&#34;] = input_url
+    response = self.send_request(&#34;removebg&#34;, &#34;POST&#34;, data)
+    return self.__process_response__(response, raw, True, out_path)</code></pre>
+</details>
+</dd>
+<dt id="removebg.RemoveBg.send_request"><code class="name flex">
+<span>def <span class="ident">send_request</span></span>(<span>self, api_method: str, method: str, data=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sends a request to the remove.bg server. </p>
+<p>:param api_method: API Method Look <a href="https://www.remove.bg/api">https://www.remove.bg/api</a> </p>
+<p>:param method: Requests Method. "GET" or "POST". </p>
+<p>:param data: Data to send. Dict. Look <a href="https://www.remove.bg/api">https://www.remove.bg/api</a> </p>
+<p>:type data: dict </p>
+<p>:return: Requests response object.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def send_request(self, api_method: str, method: str, data=None):
+    &#34;&#34;&#34;
+    Sends a request to the remove.bg server. \n
+    :param api_method: API Method Look https://www.remove.bg/api \n
+    :param method: Requests Method. &#34;GET&#34; or &#34;POST&#34;. \n
+    :param data: Data to send. Dict. Look https://www.remove.bg/api \n
+    :type data: dict \n
+    :return: Requests response object.
+    &#34;&#34;&#34;
+    if data is None:
+        data = {}
+    if method == &#34;POST&#34;:  # sending a post request
+        if data:
+            files = None
+            if &#34;image_file&#34; in data.keys():
+                files = {&#39;image_file&#39;: data[&#34;image_file&#34;]}
+                del data[&#34;image_file&#34;]
+            response = requests.post(
+                API_URL + &#39;/&#39; + api_method,
+                data=data, files=files,
+                headers={&#39;X-Api-Key&#39;: self.__api_key__}
+            )
+            return response
+        else:
+            raise Errors.EmptyResponseDataError
+    elif method == &#34;GET&#34;:  # sending a get request
+        response = requests.get(
+            API_URL + &#39;/&#39; + api_method,
+            headers={&#39;X-Api-Key&#39;: self.__api_key__}
+        )
+        return response
+    else:
+        raise Errors.WrongRequestMethodError  # raise error when method wrong</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="removebg.Account" href="#removebg.Account">Account</a></code></h4>
+<ul class="">
+<li><code><a title="removebg.Account.balance" href="#removebg.Account.balance">balance</a></code></li>
+<li><code><a title="removebg.Account.free_api_calls" href="#removebg.Account.free_api_calls">free_api_calls</a></code></li>
+<li><code><a title="removebg.Account.get_all_info" href="#removebg.Account.get_all_info">get_all_info</a></code></li>
+<li><code><a title="removebg.Account.get_balance_dict" href="#removebg.Account.get_balance_dict">get_balance_dict</a></code></li>
+<li><code><a title="removebg.Account.refresh_balance" href="#removebg.Account.refresh_balance">refresh_balance</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="removebg.Errors" href="#removebg.Errors">Errors</a></code></h4>
+<ul class="">
+<li><code><a title="removebg.Errors.ApiErrorCode400" href="#removebg.Errors.ApiErrorCode400">ApiErrorCode400</a></code></li>
+<li><code><a title="removebg.Errors.ApiErrorCode402" href="#removebg.Errors.ApiErrorCode402">ApiErrorCode402</a></code></li>
+<li><code><a title="removebg.Errors.ApiErrorCode403" href="#removebg.Errors.ApiErrorCode403">ApiErrorCode403</a></code></li>
+<li><code><a title="removebg.Errors.ApiErrorCode429" href="#removebg.Errors.ApiErrorCode429">ApiErrorCode429</a></code></li>
+<li><code><a title="removebg.Errors.EmptyResponseDataError" href="#removebg.Errors.EmptyResponseDataError">EmptyResponseDataError</a></code></li>
+<li><code><a title="removebg.Errors.UnknownError" href="#removebg.Errors.UnknownError">UnknownError</a></code></li>
+<li><code><a title="removebg.Errors.WrongRequestMethodError" href="#removebg.Errors.WrongRequestMethodError">WrongRequestMethodError</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="removebg.RemoveBg" href="#removebg.RemoveBg">RemoveBg</a></code></h4>
+<ul class="two-column">
+<li><code><a title="removebg.RemoveBg.account" href="#removebg.RemoveBg.account">account</a></code></li>
+<li><code><a title="removebg.RemoveBg.change_api_key" href="#removebg.RemoveBg.change_api_key">change_api_key</a></code></li>
+<li><code><a title="removebg.RemoveBg.remove_bg_base64" href="#removebg.RemoveBg.remove_bg_base64">remove_bg_base64</a></code></li>
+<li><code><a title="removebg.RemoveBg.remove_bg_bytes" href="#removebg.RemoveBg.remove_bg_bytes">remove_bg_bytes</a></code></li>
+<li><code><a title="removebg.RemoveBg.remove_bg_file" href="#removebg.RemoveBg.remove_bg_file">remove_bg_file</a></code></li>
+<li><code><a title="removebg.RemoveBg.remove_bg_url" href="#removebg.RemoveBg.remove_bg_url">remove_bg_url</a></code></li>
+<li><code><a title="removebg.RemoveBg.send_request" href="#removebg.RemoveBg.send_request">send_request</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.8.1</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
