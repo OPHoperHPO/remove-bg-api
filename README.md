@@ -1,4 +1,4 @@
-# 🍰 `remove_bg.py` - remove.bg Python API Wrapper 🍰
+# 🍰 `remove-bg.py` - remove.bg Python API Wrapper 🍰
 ### Description:
 This library is used to interact with the *remove.bg* API to remove the background from the image. \
 **This library implements 100% API of this service.**
