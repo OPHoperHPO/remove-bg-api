@@ -40,9 +40,9 @@ This library is used to interact with the *remove.bg* API to remove the backgrou
 ```
 1) Add asyncio support. (0% done)
 ```
-### 💵 Support me:
-
-You can thank me for developing this project, provide financial support for the development of new projects and buy me a small cup of coffee.☕\
-  Just support me on these platforms: \
-  ⭐[**Boosty**⭐](https://boosty.to/anodev) \
-  ⭐[**DonationAlerts**⭐](https://www.donationalerts.com/r/anodev_development)
+### 💵 Support me:  
+  You can thank me for developing any of my projects, provide financial support for developing new projects and buy me a small cup of coffee.☕ \
+  Just support me on these platforms:
+  * ![](https://github.com/OPHoperHPO/OPHoperHPO/raw/master/assets/imgs/boosty_logo.jpeg) [**Boosty**](https://boosty.to/anodev)
+  * ![](https://github.com/OPHoperHPO/OPHoperHPO/raw/master/assets/imgs/donationalerts_logo.png) [**DonationAlerts**](https://www.donationalerts.com/r/anodev_development)
+  * ![](https://github.com/OPHoperHPO/OPHoperHPO/raw/master/assets/imgs/paypal_logo.jpg) [**PayPal**](https://paypal.me/anodev)
